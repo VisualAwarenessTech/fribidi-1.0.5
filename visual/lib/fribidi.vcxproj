@@ -1,0 +1,941 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="debug|Win32">
+      <Configuration>debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="debug|x64">
+      <Configuration>debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|Win32">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|Win32">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1757A2C9-2982-4D30-BF98-E33CB818B3B7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fribidi</RootNamespace>
+    <Platform>Win32</Platform>
+    <ProjectName>fribidi</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;DEBUG;HAVE_CONFIG_H;BUILDING_FRIBIDI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level2</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ProgramDatabase</DebugInformationFormat>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">ProgramDatabase</DebugInformationFormat>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ProgramDatabase</DebugInformationFormat>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">ProgramDatabase</DebugInformationFormat>
+      <SupportJustMyCode Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</SupportJustMyCode>
+      <SupportJustMyCode Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</SupportJustMyCode>
+      <SupportJustMyCode Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</SupportJustMyCode>
+      <SupportJustMyCode Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</SupportJustMyCode>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</SuppressStartupBanner>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</TreatWarningAsError>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</TreatWarningAsError>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</TreatWarningAsError>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</TreatWarningAsError>
+      <DiagnosticsFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Classic</DiagnosticsFormat>
+      <DiagnosticsFormat Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Classic</DiagnosticsFormat>
+      <DiagnosticsFormat Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Classic</DiagnosticsFormat>
+      <DiagnosticsFormat Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Classic</DiagnosticsFormat>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AnySuitable</InlineFunctionExpansion>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">AnySuitable</InlineFunctionExpansion>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AnySuitable</InlineFunctionExpansion>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IntrinsicFunctions>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</IntrinsicFunctions>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IntrinsicFunctions>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</IntrinsicFunctions>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</OmitFramePointers>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</OmitFramePointers>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</OmitFramePointers>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</OmitFramePointers>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</EnableFiberSafeOptimizations>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</EnableFiberSafeOptimizations>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableFiberSafeOptimizations>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</WholeProgramOptimization>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</WholeProgramOptimization>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</WholeProgramOptimization>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</WholeProgramOptimization>
+      <UndefineAllPreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</UndefineAllPreprocessorDefinitions>
+      <UndefineAllPreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</UndefineAllPreprocessorDefinitions>
+      <UndefineAllPreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</UndefineAllPreprocessorDefinitions>
+      <UndefineAllPreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</UndefineAllPreprocessorDefinitions>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</IgnoreStandardIncludePath>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</IgnoreStandardIncludePath>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</IgnoreStandardIncludePath>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</IgnoreStandardIncludePath>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreprocessToFile>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</PreprocessToFile>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</PreprocessToFile>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreprocessSuppressLineNumbers>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</PreprocessSuppressLineNumbers>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</PreprocessSuppressLineNumbers>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</PreprocessSuppressLineNumbers>
+      <PreprocessKeepComments Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreprocessKeepComments>
+      <PreprocessKeepComments Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</PreprocessKeepComments>
+      <PreprocessKeepComments Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</PreprocessKeepComments>
+      <PreprocessKeepComments Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</PreprocessKeepComments>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</MinimalRebuild>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</MinimalRebuild>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</MinimalRebuild>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</MinimalRebuild>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Sync</ExceptionHandling>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Sync</ExceptionHandling>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Sync</ExceptionHandling>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Sync</ExceptionHandling>
+      <SmallerTypeCheck Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</SmallerTypeCheck>
+      <SmallerTypeCheck Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</SmallerTypeCheck>
+      <SmallerTypeCheck Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</SmallerTypeCheck>
+      <SmallerTypeCheck Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</SmallerTypeCheck>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</BasicRuntimeChecks>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Default</BasicRuntimeChecks>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Default</BasicRuntimeChecks>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Default</BasicRuntimeChecks>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</StructMemberAlignment>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Default</StructMemberAlignment>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Default</StructMemberAlignment>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Default</StructMemberAlignment>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BufferSecurityCheck>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</BufferSecurityCheck>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BufferSecurityCheck>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotSet</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">NotSet</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotSet</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precise</FloatingPointModel>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Precise</FloatingPointModel>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precise</FloatingPointModel>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Precise</FloatingPointModel>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</DisableLanguageExtensions>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ConformanceMode>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</ConformanceMode>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ConformanceMode>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</ConformanceMode>
+      <TreatWChar_tAsBuiltInType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</TreatWChar_tAsBuiltInType>
+      <TreatWChar_tAsBuiltInType Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</TreatWChar_tAsBuiltInType>
+      <TreatWChar_tAsBuiltInType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</TreatWChar_tAsBuiltInType>
+      <TreatWChar_tAsBuiltInType Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ForceConformanceInForLoopScope>
+      <ForceConformanceInForLoopScope Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</ForceConformanceInForLoopScope>
+      <ForceConformanceInForLoopScope Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ForceConformanceInForLoopScope>
+      <ForceConformanceInForLoopScope Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</ForceConformanceInForLoopScope>
+      <RemoveUnreferencedCodeData Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</RemoveUnreferencedCodeData>
+      <RemoveUnreferencedCodeData Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</RemoveUnreferencedCodeData>
+      <RemoveUnreferencedCodeData Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</RemoveUnreferencedCodeData>
+      <RemoveUnreferencedCodeData Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</RemoveUnreferencedCodeData>
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExpandAttributedSource>
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</ExpandAttributedSource>
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExpandAttributedSource>
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</ExpandAttributedSource>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NoListing</AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">NoListing</AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NoListing</AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">NoListing</AssemblerOutput>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)</AssemblerListingLocation>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(IntDir)</AssemblerListingLocation>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</AssemblerListingLocation>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <GenerateXMLDocumentationFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateXMLDocumentationFiles>
+      <GenerateXMLDocumentationFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</GenerateXMLDocumentationFiles>
+      <GenerateXMLDocumentationFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</GenerateXMLDocumentationFiles>
+      <GenerateXMLDocumentationFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</GenerateXMLDocumentationFiles>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)</XMLDocumentationFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(IntDir)</XMLDocumentationFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</XMLDocumentationFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(IntDir)</XMLDocumentationFileName>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</BrowseInformation>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</BrowseInformation>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</BrowseInformation>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</BrowseInformation>
+      <BrowseInformationFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)</BrowseInformationFile>
+      <BrowseInformationFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(IntDir)</BrowseInformationFile>
+      <BrowseInformationFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</BrowseInformationFile>
+      <BrowseInformationFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(IntDir)</BrowseInformationFile>
+      <CallingConvention Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Cdecl</CallingConvention>
+      <CallingConvention Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Cdecl</CallingConvention>
+      <CallingConvention Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Cdecl</CallingConvention>
+      <CallingConvention Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Cdecl</CallingConvention>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Default</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Default</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Default</CompileAs>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</ShowIncludes>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</UseFullPaths>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</UseFullPaths>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</UseFullPaths>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</UseFullPaths>
+      <OmitDefaultLibName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</OmitDefaultLibName>
+      <OmitDefaultLibName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</OmitDefaultLibName>
+      <OmitDefaultLibName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</OmitDefaultLibName>
+      <OmitDefaultLibName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</OmitDefaultLibName>
+      <ErrorReporting Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Prompt</ErrorReporting>
+      <ErrorReporting Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Prompt</ErrorReporting>
+      <ErrorReporting Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Prompt</ErrorReporting>
+      <ErrorReporting Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Prompt</ErrorReporting>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">Default</InlineFunctionExpansion>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Default</InlineFunctionExpansion>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='debug|x64'">Default</InlineFunctionExpansion>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Default</InlineFunctionExpansion>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</IntrinsicFunctions>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</IntrinsicFunctions>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</IntrinsicFunctions>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</IntrinsicFunctions>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</EnableFiberSafeOptimizations>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</EnableFiberSafeOptimizations>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</EnableFiberSafeOptimizations>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</WholeProgramOptimization>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</WholeProgramOptimization>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</WholeProgramOptimization>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</WholeProgramOptimization>
+      <UndefineAllPreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</UndefineAllPreprocessorDefinitions>
+      <UndefineAllPreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</UndefineAllPreprocessorDefinitions>
+      <UndefineAllPreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</UndefineAllPreprocessorDefinitions>
+      <UndefineAllPreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</UndefineAllPreprocessorDefinitions>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</IgnoreStandardIncludePath>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</IgnoreStandardIncludePath>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</IgnoreStandardIncludePath>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</IgnoreStandardIncludePath>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</PreprocessToFile>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</PreprocessToFile>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</PreprocessToFile>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</PreprocessSuppressLineNumbers>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</PreprocessSuppressLineNumbers>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</PreprocessSuppressLineNumbers>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</PreprocessSuppressLineNumbers>
+      <PreprocessKeepComments Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</PreprocessKeepComments>
+      <PreprocessKeepComments Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</PreprocessKeepComments>
+      <PreprocessKeepComments Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</PreprocessKeepComments>
+      <PreprocessKeepComments Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</PreprocessKeepComments>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</MinimalRebuild>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</MinimalRebuild>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</MinimalRebuild>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</MinimalRebuild>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">Sync</ExceptionHandling>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Sync</ExceptionHandling>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='debug|x64'">Sync</ExceptionHandling>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Sync</ExceptionHandling>
+      <SmallerTypeCheck Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</SmallerTypeCheck>
+      <SmallerTypeCheck Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</SmallerTypeCheck>
+      <SmallerTypeCheck Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</SmallerTypeCheck>
+      <SmallerTypeCheck Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</SmallerTypeCheck>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">Default</BasicRuntimeChecks>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Default</BasicRuntimeChecks>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='debug|x64'">Default</BasicRuntimeChecks>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Default</BasicRuntimeChecks>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">Default</StructMemberAlignment>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Default</StructMemberAlignment>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='debug|x64'">Default</StructMemberAlignment>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Default</StructMemberAlignment>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</BufferSecurityCheck>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</BufferSecurityCheck>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</BufferSecurityCheck>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">NotSet</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">NotSet</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='debug|x64'">NotSet</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">Precise</FloatingPointModel>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Precise</FloatingPointModel>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='debug|x64'">Precise</FloatingPointModel>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Precise</FloatingPointModel>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</DisableLanguageExtensions>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</ConformanceMode>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</ConformanceMode>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</ConformanceMode>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</ConformanceMode>
+      <TreatWChar_tAsBuiltInType Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</TreatWChar_tAsBuiltInType>
+      <TreatWChar_tAsBuiltInType Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</TreatWChar_tAsBuiltInType>
+      <TreatWChar_tAsBuiltInType Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</TreatWChar_tAsBuiltInType>
+      <TreatWChar_tAsBuiltInType Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</ForceConformanceInForLoopScope>
+      <ForceConformanceInForLoopScope Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</ForceConformanceInForLoopScope>
+      <ForceConformanceInForLoopScope Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</ForceConformanceInForLoopScope>
+      <ForceConformanceInForLoopScope Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</ForceConformanceInForLoopScope>
+      <RemoveUnreferencedCodeData Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</RemoveUnreferencedCodeData>
+      <RemoveUnreferencedCodeData Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</RemoveUnreferencedCodeData>
+      <RemoveUnreferencedCodeData Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</RemoveUnreferencedCodeData>
+      <RemoveUnreferencedCodeData Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</RemoveUnreferencedCodeData>
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</ExpandAttributedSource>
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</ExpandAttributedSource>
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</ExpandAttributedSource>
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</ExpandAttributedSource>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">NoListing</AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">NoListing</AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='debug|x64'">NoListing</AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">NoListing</AssemblerOutput>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">$(IntDir)</AssemblerListingLocation>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(IntDir)</AssemblerListingLocation>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='debug|x64'">$(IntDir)</AssemblerListingLocation>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='debug|x64'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='debug|x64'">$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <GenerateXMLDocumentationFiles Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</GenerateXMLDocumentationFiles>
+      <GenerateXMLDocumentationFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</GenerateXMLDocumentationFiles>
+      <GenerateXMLDocumentationFiles Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</GenerateXMLDocumentationFiles>
+      <GenerateXMLDocumentationFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</GenerateXMLDocumentationFiles>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">$(IntDir)</XMLDocumentationFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(IntDir)</XMLDocumentationFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='debug|x64'">$(IntDir)</XMLDocumentationFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(IntDir)</XMLDocumentationFileName>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</BrowseInformation>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</BrowseInformation>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</BrowseInformation>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</BrowseInformation>
+      <BrowseInformationFile Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">$(IntDir)</BrowseInformationFile>
+      <BrowseInformationFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(IntDir)</BrowseInformationFile>
+      <BrowseInformationFile Condition="'$(Configuration)|$(Platform)'=='debug|x64'">$(IntDir)</BrowseInformationFile>
+      <BrowseInformationFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(IntDir)</BrowseInformationFile>
+      <CallingConvention Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">Cdecl</CallingConvention>
+      <CallingConvention Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Cdecl</CallingConvention>
+      <CallingConvention Condition="'$(Configuration)|$(Platform)'=='debug|x64'">Cdecl</CallingConvention>
+      <CallingConvention Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Cdecl</CallingConvention>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">Default</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Default</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='debug|x64'">Default</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Default</CompileAs>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</ShowIncludes>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</UseFullPaths>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</UseFullPaths>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</UseFullPaths>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</UseFullPaths>
+      <OmitDefaultLibName Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</OmitDefaultLibName>
+      <OmitDefaultLibName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</OmitDefaultLibName>
+      <OmitDefaultLibName Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</OmitDefaultLibName>
+      <OmitDefaultLibName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</OmitDefaultLibName>
+      <ErrorReporting Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">Prompt</ErrorReporting>
+      <ErrorReporting Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Prompt</ErrorReporting>
+      <ErrorReporting Condition="'$(Configuration)|$(Platform)'=='debug|x64'">Prompt</ErrorReporting>
+      <ErrorReporting Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Prompt</ErrorReporting>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions />
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <TargetMachine>MachineX64</TargetMachine>
+      <ShowProgress Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotSet</ShowProgress>
+      <ShowProgress Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">NotSet</ShowProgress>
+      <ShowProgress Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotSet</ShowProgress>
+      <ShowProgress Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">NotSet</ShowProgress>
+      <RegisterOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</RegisterOutput>
+      <RegisterOutput Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</RegisterOutput>
+      <RegisterOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</RegisterOutput>
+      <RegisterOutput Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</RegisterOutput>
+      <PerUserRedirection Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PerUserRedirection>
+      <PerUserRedirection Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</PerUserRedirection>
+      <PerUserRedirection Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</PerUserRedirection>
+      <PerUserRedirection Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</PerUserRedirection>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files (x86)\Visual Leak Detector\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">C:\Program Files (x86)\Visual Leak Detector\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Visual Leak Detector\lib\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">C:\Program Files (x86)\Visual Leak Detector\lib\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ManifestFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <ManifestFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <ManifestFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <ManifestFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <AllowIsolation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</AllowIsolation>
+      <AllowIsolation Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</AllowIsolation>
+      <AllowIsolation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</AllowIsolation>
+      <AllowIsolation Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</AllowIsolation>
+      <EnableUAC Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</EnableUAC>
+      <EnableUAC Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</EnableUAC>
+      <EnableUAC Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableUAC>
+      <EnableUAC Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</EnableUAC>
+      <UACExecutionLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AsInvoker</UACExecutionLevel>
+      <UACExecutionLevel Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">AsInvoker</UACExecutionLevel>
+      <UACExecutionLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AsInvoker</UACExecutionLevel>
+      <UACExecutionLevel Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">AsInvoker</UACExecutionLevel>
+      <UACUIAccess Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</UACUIAccess>
+      <UACUIAccess Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</UACUIAccess>
+      <UACUIAccess Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</UACUIAccess>
+      <UACUIAccess Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</UACUIAccess>
+      <ProgramDatabaseFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateMapFile>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</GenerateMapFile>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</GenerateMapFile>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</GenerateMapFile>
+      <MapExports Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</MapExports>
+      <MapExports Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</MapExports>
+      <MapExports Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</MapExports>
+      <MapExports Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</MapExports>
+      <SwapRunFromCD Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</SwapRunFromCD>
+      <SwapRunFromCD Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</SwapRunFromCD>
+      <SwapRunFromCD Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</SwapRunFromCD>
+      <SwapRunFromCD Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</SwapRunFromCD>
+      <SwapRunFromNET Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</SwapRunFromNET>
+      <SwapRunFromNET Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</SwapRunFromNET>
+      <SwapRunFromNET Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</SwapRunFromNET>
+      <SwapRunFromNET Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</SwapRunFromNET>
+      <Driver Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotSet</Driver>
+      <Driver Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">NotSet</Driver>
+      <Driver Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotSet</Driver>
+      <Driver Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">NotSet</Driver>
+      <ProfileGuidedDatabase Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <IgnoreEmbeddedIDL Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</IgnoreEmbeddedIDL>
+      <IgnoreEmbeddedIDL Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</IgnoreEmbeddedIDL>
+      <IgnoreEmbeddedIDL Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</IgnoreEmbeddedIDL>
+      <IgnoreEmbeddedIDL Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</IgnoreEmbeddedIDL>
+      <TypeLibraryResourceID Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</TypeLibraryResourceID>
+      <TypeLibraryResourceID Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">1</TypeLibraryResourceID>
+      <TypeLibraryResourceID Condition="'$(Configuration)|$(Platform)'=='Release|x64'">1</TypeLibraryResourceID>
+      <TypeLibraryResourceID Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">1</TypeLibraryResourceID>
+      <NoEntryPoint Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</NoEntryPoint>
+      <NoEntryPoint Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</NoEntryPoint>
+      <NoEntryPoint Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</NoEntryPoint>
+      <NoEntryPoint Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</NoEntryPoint>
+      <SetChecksum Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</SetChecksum>
+      <SetChecksum Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</SetChecksum>
+      <SetChecksum Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</SetChecksum>
+      <SetChecksum Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</SetChecksum>
+      <RandomizedBaseAddress Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</RandomizedBaseAddress>
+      <RandomizedBaseAddress Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</RandomizedBaseAddress>
+      <RandomizedBaseAddress Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</RandomizedBaseAddress>
+      <RandomizedBaseAddress Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</RandomizedBaseAddress>
+      <DataExecutionPrevention Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DataExecutionPrevention>
+      <DataExecutionPrevention Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</DataExecutionPrevention>
+      <DataExecutionPrevention Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DataExecutionPrevention>
+      <DataExecutionPrevention Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</DataExecutionPrevention>
+      <Profile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</Profile>
+      <Profile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</Profile>
+      <Profile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</Profile>
+      <Profile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</Profile>
+      <CLRImageType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</CLRImageType>
+      <CLRImageType Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Default</CLRImageType>
+      <CLRImageType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Default</CLRImageType>
+      <CLRImageType Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Default</CLRImageType>
+      <LinkErrorReporting Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PromptImmediately</LinkErrorReporting>
+      <LinkErrorReporting Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">PromptImmediately</LinkErrorReporting>
+      <LinkErrorReporting Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PromptImmediately</LinkErrorReporting>
+      <LinkErrorReporting Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">PromptImmediately</LinkErrorReporting>
+      <ShowProgress Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">NotSet</ShowProgress>
+      <ShowProgress Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">NotSet</ShowProgress>
+      <ShowProgress Condition="'$(Configuration)|$(Platform)'=='debug|x64'">NotSet</ShowProgress>
+      <ShowProgress Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">NotSet</ShowProgress>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</SuppressStartupBanner>
+      <RegisterOutput Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</RegisterOutput>
+      <RegisterOutput Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</RegisterOutput>
+      <RegisterOutput Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</RegisterOutput>
+      <RegisterOutput Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</RegisterOutput>
+      <PerUserRedirection Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</PerUserRedirection>
+      <PerUserRedirection Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</PerUserRedirection>
+      <PerUserRedirection Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</PerUserRedirection>
+      <PerUserRedirection Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</PerUserRedirection>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">C:\Program Files (x86)\Visual Leak Detector\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">C:\Program Files (x86)\Visual Leak Detector\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='debug|x64'">C:\Program Files (x86)\Visual Leak Detector\lib\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">C:\Program Files (x86)\Visual Leak Detector\lib\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ManifestFile Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <ManifestFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <ManifestFile Condition="'$(Configuration)|$(Platform)'=='debug|x64'">$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <ManifestFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <AllowIsolation Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</AllowIsolation>
+      <AllowIsolation Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</AllowIsolation>
+      <AllowIsolation Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</AllowIsolation>
+      <AllowIsolation Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</AllowIsolation>
+      <EnableUAC Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</EnableUAC>
+      <EnableUAC Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</EnableUAC>
+      <EnableUAC Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</EnableUAC>
+      <EnableUAC Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</EnableUAC>
+      <UACExecutionLevel Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">AsInvoker</UACExecutionLevel>
+      <UACExecutionLevel Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">AsInvoker</UACExecutionLevel>
+      <UACExecutionLevel Condition="'$(Configuration)|$(Platform)'=='debug|x64'">AsInvoker</UACExecutionLevel>
+      <UACExecutionLevel Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">AsInvoker</UACExecutionLevel>
+      <UACUIAccess Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</UACUIAccess>
+      <UACUIAccess Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</UACUIAccess>
+      <UACUIAccess Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</UACUIAccess>
+      <UACUIAccess Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</UACUIAccess>
+      <ProgramDatabaseFile Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile Condition="'$(Configuration)|$(Platform)'=='debug|x64'">$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</GenerateMapFile>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</GenerateMapFile>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</GenerateMapFile>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</GenerateMapFile>
+      <MapExports Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</MapExports>
+      <MapExports Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</MapExports>
+      <MapExports Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</MapExports>
+      <MapExports Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</MapExports>
+      <SwapRunFromCD Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</SwapRunFromCD>
+      <SwapRunFromCD Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</SwapRunFromCD>
+      <SwapRunFromCD Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</SwapRunFromCD>
+      <SwapRunFromCD Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</SwapRunFromCD>
+      <SwapRunFromNET Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</SwapRunFromNET>
+      <SwapRunFromNET Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</SwapRunFromNET>
+      <SwapRunFromNET Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</SwapRunFromNET>
+      <SwapRunFromNET Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</SwapRunFromNET>
+      <Driver Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">NotSet</Driver>
+      <Driver Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">NotSet</Driver>
+      <Driver Condition="'$(Configuration)|$(Platform)'=='debug|x64'">NotSet</Driver>
+      <Driver Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">NotSet</Driver>
+      <ProfileGuidedDatabase Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase Condition="'$(Configuration)|$(Platform)'=='debug|x64'">$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <IgnoreEmbeddedIDL Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</IgnoreEmbeddedIDL>
+      <IgnoreEmbeddedIDL Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</IgnoreEmbeddedIDL>
+      <IgnoreEmbeddedIDL Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</IgnoreEmbeddedIDL>
+      <IgnoreEmbeddedIDL Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</IgnoreEmbeddedIDL>
+      <TypeLibraryResourceID Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">1</TypeLibraryResourceID>
+      <TypeLibraryResourceID Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">1</TypeLibraryResourceID>
+      <TypeLibraryResourceID Condition="'$(Configuration)|$(Platform)'=='debug|x64'">1</TypeLibraryResourceID>
+      <TypeLibraryResourceID Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">1</TypeLibraryResourceID>
+      <NoEntryPoint Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</NoEntryPoint>
+      <NoEntryPoint Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</NoEntryPoint>
+      <NoEntryPoint Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</NoEntryPoint>
+      <NoEntryPoint Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</NoEntryPoint>
+      <SetChecksum Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</SetChecksum>
+      <SetChecksum Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</SetChecksum>
+      <SetChecksum Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</SetChecksum>
+      <SetChecksum Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</SetChecksum>
+      <RandomizedBaseAddress Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</RandomizedBaseAddress>
+      <RandomizedBaseAddress Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</RandomizedBaseAddress>
+      <RandomizedBaseAddress Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</RandomizedBaseAddress>
+      <RandomizedBaseAddress Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</RandomizedBaseAddress>
+      <DataExecutionPrevention Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</DataExecutionPrevention>
+      <DataExecutionPrevention Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</DataExecutionPrevention>
+      <DataExecutionPrevention Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</DataExecutionPrevention>
+      <DataExecutionPrevention Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</DataExecutionPrevention>
+      <TurnOffAssemblyGeneration Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</TurnOffAssemblyGeneration>
+      <TurnOffAssemblyGeneration Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</TurnOffAssemblyGeneration>
+      <TurnOffAssemblyGeneration Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</TurnOffAssemblyGeneration>
+      <TurnOffAssemblyGeneration Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</TurnOffAssemblyGeneration>
+      <Profile Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</Profile>
+      <Profile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</Profile>
+      <Profile Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</Profile>
+      <Profile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</Profile>
+      <CLRImageType Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">Default</CLRImageType>
+      <CLRImageType Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Default</CLRImageType>
+      <CLRImageType Condition="'$(Configuration)|$(Platform)'=='debug|x64'">Default</CLRImageType>
+      <CLRImageType Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Default</CLRImageType>
+      <LinkErrorReporting Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">PromptImmediately</LinkErrorReporting>
+      <LinkErrorReporting Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">PromptImmediately</LinkErrorReporting>
+      <LinkErrorReporting Condition="'$(Configuration)|$(Platform)'=='debug|x64'">PromptImmediately</LinkErrorReporting>
+      <LinkErrorReporting Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">PromptImmediately</LinkErrorReporting>
+      <TurnOffAssemblyGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</TurnOffAssemblyGeneration>
+      <TurnOffAssemblyGeneration Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</TurnOffAssemblyGeneration>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</LinkLibraryDependencies>
+      <LinkLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</LinkLibraryDependencies>
+      <LinkLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</LinkLibraryDependencies>
+      <LinkLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</LinkLibraryDependencies>
+    </ProjectReference>
+    <ProjectReference>
+      <UseLibraryDependencyInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</UseLibraryDependencyInputs>
+      <UseLibraryDependencyInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</UseLibraryDependencyInputs>
+      <UseLibraryDependencyInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</UseLibraryDependencyInputs>
+      <UseLibraryDependencyInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Manifest>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</SuppressStartupBanner>
+    </Manifest>
+    <Manifest>
+      <VerboseOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VerboseOutput>
+      <VerboseOutput Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</VerboseOutput>
+      <VerboseOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VerboseOutput>
+      <VerboseOutput Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</VerboseOutput>
+      <GenerateCatalogFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateCatalogFiles>
+      <GenerateCatalogFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</GenerateCatalogFiles>
+      <GenerateCatalogFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</GenerateCatalogFiles>
+      <GenerateCatalogFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</GenerateCatalogFiles>
+      <EnableDpiAwareness Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EnableDpiAwareness>
+      <EnableDpiAwareness Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</EnableDpiAwareness>
+      <EnableDpiAwareness Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</EnableDpiAwareness>
+      <EnableDpiAwareness Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</EnableDpiAwareness>
+      <UpdateFileHashes Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</UpdateFileHashes>
+      <UpdateFileHashes Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</UpdateFileHashes>
+      <UpdateFileHashes Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</UpdateFileHashes>
+      <UpdateFileHashes Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</UpdateFileHashes>
+    </Manifest>
+    <Xdcmake>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</SuppressStartupBanner>
+    </Xdcmake>
+    <Xdcmake>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)$(TargetName).xml</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(OutDir)$(TargetName).xml</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)$(TargetName).xml</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(OutDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Xdcmake>
+      <DocumentLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DocumentLibraryDependencies>
+      <DocumentLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</DocumentLibraryDependencies>
+      <DocumentLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DocumentLibraryDependencies>
+      <DocumentLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</DocumentLibraryDependencies>
+    </Xdcmake>
+    <Bscmake>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</SuppressStartupBanner>
+    </Bscmake>
+    <Bscmake>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)$(TargetName).bsc</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(OutDir)$(TargetName).bsc</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)$(TargetName).bsc</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <Bscmake>
+      <PreserveSbr Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreserveSbr>
+      <PreserveSbr Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</PreserveSbr>
+      <PreserveSbr Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</PreserveSbr>
+      <PreserveSbr Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</PreserveSbr>
+    </Bscmake>
+    <ProjectReference>
+      <LinkLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</LinkLibraryDependencies>
+      <LinkLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</LinkLibraryDependencies>
+      <LinkLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</LinkLibraryDependencies>
+      <LinkLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkLibraryDependencies>
+    </ProjectReference>
+    <ProjectReference>
+      <UseLibraryDependencyInputs Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</UseLibraryDependencyInputs>
+      <UseLibraryDependencyInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</UseLibraryDependencyInputs>
+      <UseLibraryDependencyInputs Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</UseLibraryDependencyInputs>
+      <UseLibraryDependencyInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Manifest>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</SuppressStartupBanner>
+    </Manifest>
+    <Manifest>
+      <VerboseOutput Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</VerboseOutput>
+      <VerboseOutput Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</VerboseOutput>
+      <VerboseOutput Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</VerboseOutput>
+      <VerboseOutput Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</VerboseOutput>
+      <GenerateCatalogFiles Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</GenerateCatalogFiles>
+      <GenerateCatalogFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</GenerateCatalogFiles>
+      <GenerateCatalogFiles Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</GenerateCatalogFiles>
+      <GenerateCatalogFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</GenerateCatalogFiles>
+      <EnableDpiAwareness Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</EnableDpiAwareness>
+      <EnableDpiAwareness Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</EnableDpiAwareness>
+      <EnableDpiAwareness Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</EnableDpiAwareness>
+      <EnableDpiAwareness Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</EnableDpiAwareness>
+      <UpdateFileHashes Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</UpdateFileHashes>
+      <UpdateFileHashes Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</UpdateFileHashes>
+      <UpdateFileHashes Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</UpdateFileHashes>
+      <UpdateFileHashes Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</UpdateFileHashes>
+    </Manifest>
+    <Xdcmake>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</SuppressStartupBanner>
+    </Xdcmake>
+    <Xdcmake>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">$(OutDir)$(TargetName).xml</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(OutDir)$(TargetName).xml</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='debug|x64'">$(OutDir)$(TargetName).xml</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(OutDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Xdcmake>
+      <DocumentLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</DocumentLibraryDependencies>
+      <DocumentLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</DocumentLibraryDependencies>
+      <DocumentLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</DocumentLibraryDependencies>
+      <DocumentLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</DocumentLibraryDependencies>
+    </Xdcmake>
+    <Bscmake>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</SuppressStartupBanner>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</SuppressStartupBanner>
+    </Bscmake>
+    <Bscmake>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">$(OutDir)$(TargetName).bsc</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(OutDir)$(TargetName).bsc</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='debug|x64'">$(OutDir)$(TargetName).bsc</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <Bscmake>
+      <PreserveSbr Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">false</PreserveSbr>
+      <PreserveSbr Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</PreserveSbr>
+      <PreserveSbr Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</PreserveSbr>
+      <PreserveSbr Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>fribidid</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">
+    <LinkIncremental />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">
+    <LinkIncremental />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
+    <LinkIncremental />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <LinkIncremental />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\lib\meson.build" />
+  </ItemGroup>
+  <ItemGroup>
+    <CLInclude Include="..\lib\fribidi-config.h" />
+    <CLInclude Include="..\config.h" />
+    <CLInclude Include="..\gen.tab\fribidi-unicode-version.h" />
+    <CLInclude Include="..\gen.tab\bidi-type.tab.i" />
+    <CLInclude Include="..\gen.tab\joining-type.tab.i" />
+    <CLInclude Include="..\gen.tab\arabic-shaping.tab.i" />
+    <CLInclude Include="..\gen.tab\mirroring.tab.i" />
+    <CLInclude Include="..\gen.tab\brackets.tab.i" />
+    <CLInclude Include="..\gen.tab\brackets-type.tab.i" />
+  </ItemGroup>
+  <ItemGroup>
+    <CLCompile Include="..\..\lib\fribidi.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-arabic.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-arabic.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-bidi.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-bidi.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-bidi-types.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-bidi-types.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-char-sets.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-char-sets.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-char-sets-cap-rtl.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-char-sets-cap-rtl.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-char-sets-cp1255.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-char-sets-cp1255.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-char-sets-cp1256.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-char-sets-cp1256.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-char-sets-iso8859-6.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-char-sets-iso8859-6.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-char-sets-iso8859-8.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-char-sets-iso8859-8.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-char-sets-utf8.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-char-sets-utf8.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-deprecated.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-deprecated.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-joining.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-joining.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-joining-types.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-joining-types.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-mirroring.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-mirroring.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-brackets.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-brackets.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-run.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-run.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\lib\fribidi-shape.c">
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);HAVE_CONFIG_H;FRIBIDI_ENTRY=__declspec(dllexport)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>76b5a35@@fribidi@sha;.;..\..\lib;..\..\.;..;..\gen.tab;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)fribidi-shape.c.obj</ObjectFileName>
+    </CLCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\gen.tab\1a55e88@@fribidi-unicode-version.h@cus.vcxproj">
+      <Project>{19EC3775-3776-4275-9D8D-6832B8E943F5}</Project>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gen.tab\1a55e88@@gen-bidi-type-tab@cus.vcxproj">
+      <Project>{982E9942-47D0-4279-B296-B1D3E78E2AF4}</Project>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gen.tab\1a55e88@@gen-joining-type-tab@cus.vcxproj">
+      <Project>{9C4DB9F6-8EAA-4025-8F9C-A22996007D32}</Project>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gen.tab\1a55e88@@gen-arabic-shaping-tab@cus.vcxproj">
+      <Project>{0BB4E118-7E8B-48A3-8384-5C5F3FFC7C49}</Project>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gen.tab\1a55e88@@gen-mirroring-tab@cus.vcxproj">
+      <Project>{FF4819F1-53BD-4C9F-B0F9-932D3D2A957C}</Project>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gen.tab\1a55e88@@gen-brackets-tab@cus.vcxproj">
+      <Project>{F06FE1CF-2B22-43F4-860D-72D7A260D48F}</Project>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gen.tab\1a55e88@@gen-brackets-type-tab@cus.vcxproj">
+      <Project>{3E291664-6AC9-4471-9B22-3F9E0D912F2F}</Project>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

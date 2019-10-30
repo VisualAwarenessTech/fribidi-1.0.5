@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="debug|Win32">
+			<Configuration>debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{FF4819F1-53BD-4C9F-B0F9-932D3D2A957C}</ProjectGuid>
+		<Keyword>Win32Proj</Keyword>
+		<Platform>Win32</Platform>
+		<ProjectName>gen-mirroring-tab</ProjectName>
+		<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+	<PropertyGroup Label="Configuration">
+		<ConfigurationType/>
+		<CharacterSet>MultiByte</CharacterSet>
+		<UseOfMfc>false</UseOfMfc>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir>.\</OutDir>
+		<IntDir>1a55e88@@gen-mirroring-tab@cus\</IntDir>
+		<TargetName>gen-mirroring-tab</TargetName>
+	</PropertyGroup>
+	<ItemGroup>
+		<CustomBuild Include="K:\Development\op3d_active\fribidi-1.0.5\msvc\meson-private\custom_target.rule">
+			<Command>setlocal
+&quot;C:\Program Files (x86)\Python38-32\Scripts\meson&quot; &quot;--internal&quot; &quot;exe&quot; &quot;--unpickle&quot; &quot;K:\Development\op3d_active\fribidi-1.0.5\msvc\meson-private\meson_exe_gen-mirroring-tab_ac4028091146f291808737efd1c315db426cf546.dat&quot;
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+			<Outputs>K:\Development\op3d_active\fribidi-1.0.5\msvc\gen.tab\mirroring.tab.i</Outputs>
+			<AdditionalInputs>K:\Development\op3d_active\fribidi-1.0.5\msvc\meson-private\meson_exe_gen-mirroring-tab_ac4028091146f291808737efd1c315db426cf546.dat;K:\Development\op3d_active\fribidi-1.0.5\msvc\..\gen.tab\unidata/BidiMirroring.txt</AdditionalInputs>
+		</CustomBuild>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="K:\Development\op3d_active\fribidi-1.0.5\msvc\REGEN.vcxproj">
+			<Project>{E74CF748-D1E5-4191-BD4D-F763C01A5D7E}</Project>
+			<LinkLibraryDependencies>false</LinkLibraryDependencies>
+		</ProjectReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include=".\1a55e88@@gen-mirroring-tab@exe.vcxproj">
+			<Project>{7109FBA6-18B8-4693-A187-2A9D446BD497}</Project>
+			<LinkLibraryDependencies>false</LinkLibraryDependencies>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

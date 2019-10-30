@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="debug|Win32">
+			<Configuration>debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{0BB4E118-7E8B-48A3-8384-5C5F3FFC7C49}</ProjectGuid>
+		<Keyword>Win32Proj</Keyword>
+		<Platform>Win32</Platform>
+		<ProjectName>gen-arabic-shaping-tab</ProjectName>
+		<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+	<PropertyGroup Label="Configuration">
+		<ConfigurationType/>
+		<CharacterSet>MultiByte</CharacterSet>
+		<UseOfMfc>false</UseOfMfc>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir>.\</OutDir>
+		<IntDir>1a55e88@@gen-arabic-shaping-tab@cus\</IntDir>
+		<TargetName>gen-arabic-shaping-tab</TargetName>
+	</PropertyGroup>
+	<ItemGroup>
+		<CustomBuild Include="K:\Development\op3d_active\fribidi-1.0.5\msvc\meson-private\custom_target.rule">
+			<Command>setlocal
+&quot;C:\Program Files (x86)\Python38-32\Scripts\meson&quot; &quot;--internal&quot; &quot;exe&quot; &quot;--unpickle&quot; &quot;K:\Development\op3d_active\fribidi-1.0.5\msvc\meson-private\meson_exe_gen-arabic-shaping-tab_ac358b069f63f7147dd7d79e472a7f55d87d8a2f.dat&quot;
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+			<Outputs>K:\Development\op3d_active\fribidi-1.0.5\msvc\gen.tab\arabic-shaping.tab.i</Outputs>
+			<AdditionalInputs>K:\Development\op3d_active\fribidi-1.0.5\msvc\meson-private\meson_exe_gen-arabic-shaping-tab_ac358b069f63f7147dd7d79e472a7f55d87d8a2f.dat;K:\Development\op3d_active\fribidi-1.0.5\msvc\..\gen.tab\unidata/UnicodeData.txt</AdditionalInputs>
+		</CustomBuild>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="K:\Development\op3d_active\fribidi-1.0.5\msvc\REGEN.vcxproj">
+			<Project>{E74CF748-D1E5-4191-BD4D-F763C01A5D7E}</Project>
+			<LinkLibraryDependencies>false</LinkLibraryDependencies>
+		</ProjectReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include=".\1a55e88@@gen-arabic-shaping-tab@exe.vcxproj">
+			<Project>{E7CB9348-BAEC-4A41-8708-9A90B878B2E9}</Project>
+			<LinkLibraryDependencies>false</LinkLibraryDependencies>
+		</ProjectReference>
+	</ItemGroup>
+</Project>
