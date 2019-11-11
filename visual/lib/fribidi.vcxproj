@@ -55,12 +55,12 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;DEBUG;HAVE_CONFIG_H;BUILDING_FRIBIDI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;HAVE_CONFIG_H;BUILDING_FRIBIDI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <WarningLevel>Level2</WarningLevel>
-      <Optimization>Disabled</Optimization>
+      <Optimization>Full</Optimization>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ProgramDatabase</DebugInformationFormat>
